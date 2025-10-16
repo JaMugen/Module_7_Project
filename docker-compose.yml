@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  qr_code_app_: &qr_code_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - QR_CODE_DIR=/app/qr_codes
+      - FILL_COLOR=yellow
+      - BACK_COLOR=blue
+    volumes:
+      - ./qr_codes:/app/qr_codes  # Maps the local 'qr_codes' directory to '/app/qr_codes' in the container
+   
+  
+  run_1:
+    <<: *qr_code_app
+    command: command: --url https://github.com/JaMugen #My GitHub profile
+
+  run_2:
+    <<: *qr_code_app
+    command: --url 
