@@ -242,6 +242,7 @@ Then submit the GitHub repository link as instructed.
 | Install Python Packages        | `pip install -r requirements.txt`               |
 | Build Docker Image              | `docker build -t <image-name> .`                |
 | Run Docker Container            | `docker run -it --rm <image-name>`               |
+| Run Docker Container using compose    | `docker compose up`  |
 | Push Code to GitHub             | `git add . && git commit -m "message" && git push` |
 
 ---
@@ -262,3 +263,15 @@ Then submit the GitHub repository link as instructed.
 - [Python Downloads](https://www.python.org/downloads/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+
+---
+
+# Module 7
+
+## My Github Repository
+
+![Github repository](/qr_codes/QRCode_20251017004721.png "My QR Code Link")
+
+## My DockerHub Image
+
+![Docker Image](qr_codes/QRCode_20251017005555.png "My QR Code Link")
