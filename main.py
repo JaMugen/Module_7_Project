@@ -27,7 +27,7 @@ def setup_logging():
 
 def create_directory(path: Path):
     try:
-        path.mkdir(parents=True, exist_ok=True)
+        path.mkdir(mode = 0o777, parents=True, exist_ok=True)
     except Exception as e:
         logging.error(f"Failed to create directory {path}: {e}")
         exit(1)
@@ -59,7 +59,7 @@ def generate_qr_code(data, path, fill_color='red', back_color='white'):
 def main():
     # Set up command-line argument parsing
     parser = argparse.ArgumentParser(description='Generate a QR code.')
-    parser.add_argument('--url', help='The URL to encode in the QR code', default='https://github.com/kaw393939')
+    parser.add_argument('--url', help='The URL to encode in the QR code', default='https://github.com/JaMugen')
     args = parser.parse_args()
 
     # Initial logging setup
