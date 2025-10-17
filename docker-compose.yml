@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  run_1: &qr_code_app
+  qr_code_app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,5 +11,5 @@ services:
       - BACK_COLOR=blue
     volumes:
       - ./qr_codes:/app/qr_codes  # Maps the local 'qr_codes' directory to '/app/qr_codes' in the container
-    command: --url https://github.com/JaMugen #My GitHub profile
+    command: --url  https://hub.docker.com/repository/docker/pitou500/module7_project/general #My GitHub profile
 
