@@ -139,5 +139,4 @@ cython_debug/
 .jupyterlab-config
 
 #Qr code images
-qr_codes/
 
