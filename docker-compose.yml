@@ -2,9 +2,7 @@ version: '3.8'
 
 services:
   qr_code_app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: pitou500/module7_project
     environment:
       - QR_CODE_DIR=/app/qr_codes
       - FILL_COLOR=yellow
