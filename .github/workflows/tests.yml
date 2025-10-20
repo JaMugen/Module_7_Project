@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Set your desired Python version
+          python-version: '3.12'  
 
       - name: Install dependencies from requirements.txt
         run: |
@@ -29,4 +29,5 @@ jobs:
 
       - name: Run tests with pytest and enforce 90% coverage
         run: |
-          pytest --cov=app --cov-fail-under=90
+          pytest --cov=. --cov-fail-under=90
+
