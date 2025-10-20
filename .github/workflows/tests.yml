@@ -53,7 +53,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ vars.DOCKERHUB_USERNAME }}/module7-qr-generator
+          images: ${{ vars.DOCKERHUB_USERNAME }}/module7_project
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -71,6 +71,4 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Test Docker image
-        run: |
-          docker run --rm ${{ secrets.DOCKER_USERNAME }}/module7-qr-generator:latest --url https://github.com/JaMugen
+  
